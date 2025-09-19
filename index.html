@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+        content="width=device-width,initial-scale=1">
+        <title>My Personal Website</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <script>
+            function setTheme(theme){
+                if(!theme){
+                    document.documentElement.classList.remove('dark','blue');
+                    localStorage.removeItem('siteTheme');
+
+                } else {
+                    document.documentElement.classList.remove('dark','blue');
+                    document.documentElement.classList.add(theme);
+
+                    localStorage.setItem('siteTheme',theme);
+
+                }
+
+            }
+            document.addEventListener('DOMContentLoaded',()=>{
+                const saved=localStorage.getItem('siteTheme');
+                if(saved) setTheme(saved);
+                
+            });
+
+        </script>
+        <style>
+            .dark { --tw-bg-opacity:1;background-color:rgba(17,24,39,var(--tw-bg-opacity));
+                 color:white;  }
+                 .blue { --tw-bg-opacity:1;background-color: rgba(219,234,254,var(--tw-bg-opacity));
+
+                color:#1e3a8a; }
+        </style>
+"
+    </head>
+     <body class="min-h-screen flex flex-col">
+        <header class="text-center py-10 bg-gradient-to-r from-purple-500 to-blue-500 text-white">
+            <img src="abhi.jpg" alt="Abhishek Somwanshi" class="mx-auto rounded-full w-36 h-36 object-cover border-4 border-white shadow-Ig">
+            <h1 class="text-3xl font-bold mt-4">ABHISHEK SOMWANSHI</h1>
+            <p class="text-Ig">Aspiring Engineer | Web Development | Tech Enthusiast</p>
+             <div class="mt-4 space-x-2">
+      <button onclick="setTheme('')" class="px-3 py-1 bg-white text-gray-800 rounded">Default</button>
+      <button onclick="setTheme('dark')" class="px-3 py-1 bg-gray-800 text-white rounded">Dark</button>
+      <button onclick="setTheme('blue')" class="px-3 py-1 bg-blue-600 text-white rounded">Blue</button>
+    </div>
+    <div class="mt-6 flex justify-center space-x-4">
+      <a href="https://github.com/Abhishek96-as" target="_blank" class="hover:opacity-80">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub" class="w-6 h-6 invert">
+      </a>
+      <a href="https://www.linkedin.com/in/abhisheksomwanshi" target="_blank" class="hover:opacity-80">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6 invert">
+      </a>
+      <a href="https://twitter.com/yourusername" target="_blank" class="hover:opacity-80">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter" class="w-6 h-6 invert">
+      </a>
+      <a href="https://www.instagram.com/_abhizzz____?igsh=ZzkyYXdtbTF0ZGx5" target="_blank" class="hover:opacity-80">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="w-6 h-6 invert">
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section id="about" class="max-w-4xl mx-auto py-12 px-6">
+      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+      <p>“I am Abhishek Somwanshi, a 3rd-year B.Tech Computer Science student with skills in coding, cloud, and cybersecurity. I enjoy building projects and aim to become a software engineer.”</p>
+    </section>
+
+    <section id="education" class="bg-gray-100 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Education</h2>
+        <ul class="space-y-4">
+          <li>
+            <h3 class="font-bold">B.Tech in Computer Science</h3>
+            <p class="text-sm text-gray-700">Pimpri Chinchwad University — 2023–2027</p>
+          </li>
+          <li>
+            <h3 class="font-bold">Higher Secondary</h3>
+            <p class="text-sm text-gray-700">Pratibha Junior College — 2022-2023</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Skills</h2>
+        <div class="flex flex-wrap gap-3">
+          <span class="px-3 py-1 bg-purple-500 text-white rounded-full">HTML</span>
+          <span class="px-3 py-1 bg-blue-500 text-white rounded-full">CSS</span>
+          <span class="px-3 py-1 bg-yellow-500 text-white rounded-full">JavaScript</span>
+          <span class="px-3 py-1 bg-green-500 text-white rounded-full">C/C++</span>
+          <span class="px-3 py-1 bg-indigo-500 text-white rounded-full">Databases</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="bg-gray-100 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Certificates</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Blockchain Basics (Coursera)</li>
+          <li>Foundation of Cybersecurity (Coursera)</li>
+          <li>AWS Cloud Certificate (Forage)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-4 bg-white shadow rounded">
+            <h3 class="font-bold">Mini Project: Chatting Application</h3>
+            <p class="text-sm">The Chatting Application project is a software-based project that allows two or more users to communicate with each other in real-time through text messages. It is designed to demonstrate the concepts of client-server communication, socket programming, and networking.</p>
+          </div>
+          <div class="p-4 bg-white shadow rounded">
+            <h3 class="font-bold">Mini Project: Pulse Sensor</h3>
+            <p class="text-sm">
+
+The Pulse Sensor project is a biomedical electronics project that measures a person’s heart rate (pulse rate) using a simple optical sensor. The sensor works on the principle of photoplethysmography (PPG), where light is used to detect the blood volume changes in the fingertip.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies" class="bg-gray-100 py-12 px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-4">Hobbies & Interests</h2>
+        <p>I enjoy playing cricket, watching movies and web series, exploring new places, and learning new technologies. These hobbies keep me balanced and motivated.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="py-12 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+        <p>Email: <a href="mailto:abhishek.somwanshi23@gmail.com" class="text-blue-600">abhishek.somwanshi23@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 bg-gray-900 text-white">
+    <p>© 2025 ABHISHEK SOMWANSHI. Built with HTML, CSS & JS 🌐</p>
+  </footer>
+</body>
+</html>
+        </header>
+     </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
